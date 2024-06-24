@@ -12,7 +12,7 @@
 			type: "/;type=mp3",
             streampath: "/stream?icy=http",			
 			enable_cors: false,
-			cors: "https://shoutcastapps.herokuapp.com",			
+			cors: "https://zet.pluginsandthemes.ro",			
 			artwork: true,
             logo: "img/logo.jpg",
 			servertitle: "My Radio Title", //For Shoutcast v1 server
@@ -46,8 +46,8 @@
             if(settings.version == 1) {
                 audio.src = settings.URL + "/;type=mp3";
                 settings.src = audio.src;				
-                var dataURL = settings.cors + "?q=" + settings.URL + "/7.html";
-                var hisURL = settings.cors + "?q=" + settings.URL + "/played.html";
+                var dataURL = settings.cors + "/" + settings.URL + "/7.html";
+                var hisURL = settings.cors + "/" + settings.URL + "/played.html";
                 getSH(dataURL, hisURL);
             }
 
@@ -55,8 +55,8 @@
 				audio.src = settings.URL + settings.streampath;
 				settings.src = audio.src;
 				if(settings.enable_cors == true) {
-					var dataURL = settings.cors + "?q=" + settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
-					var hisURL = settings.cors + "?q=" + settings.URL + "/played?sid="+ settings.stream_id +"&type=json&callback=?";
+					var dataURL = settings.cors + "/" + settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
+					var hisURL = settings.cors + "/" + settings.URL + "/played?sid="+ settings.stream_id +"&type=json&callback=?";
 				}
 				else {
 					var dataURL = settings.URL + "/stats?sid="+ settings.stream_id +"&json=1&callback=?";
@@ -68,7 +68,7 @@
             else if(settings.version == "icecast") {
                 audio.src = settings.URL + "/" + settings.mount_point;
                 settings.src = audio.src;
-				var dataURL = settings.cors + "?q=" + settings.URL + "/status-json.xsl";
+				var dataURL = settings.cors + "/" + settings.URL + "/status-json.xsl";
                 getIC(dataURL);				
             }
         });
