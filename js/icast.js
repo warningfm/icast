@@ -275,7 +275,7 @@
 			    function foo() {
                     $.ajax ({
                     dataType: 'json',
-                    url: settings.cors + "/?q=" + settings.URL + "/status-json.xsl",
+                    url: settings.cors + "/" + settings.URL + "/status-json.xsl",
                     success:					
                         function(data) {
                             var result = findMPData(data);
