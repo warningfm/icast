@@ -10,7 +10,7 @@
             stream_id: 1,
 			mount_point: "", //For Icecast server
 			type: "/;type=mp3",
-            streampath: "/stream?icy=http",			
+            streampath: "/rbtfm?icy=https",			
 			enable_cors: false,
 			cors: "https://zet.pluginsandthemes.ro",			
 			artwork: true,
@@ -346,7 +346,7 @@
 			title = formatTitle(title);
             artist = encodeURI(artist);
             title = encodeURI(title);	
-            var url = "https://itunes.apple.com/search?term==" + artist + "-" + title + "&media=music&limit=1";
+            var url = "https://itunes.apple.com/search?term=" + artist + "-" + title + "&media=music&limit=1";
             $.ajax ({
                 dataType: 'jsonp',
                 url: url,
@@ -465,7 +465,7 @@
 			title = formatTitle(title);
             artist = encodeURI(artist);
             title = encodeURI(title);	
-            var url = "https://itunes.apple.com/search?term==" + artist + "-" + title + "&media=music&limit=1";
+            var url = "https://itunes.apple.com/search?term=" + artist + "-" + title + "&media=music&limit=1";
 			$.ajax ({
                 dataType: 'jsonp',
                 url: url,
