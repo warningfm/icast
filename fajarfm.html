@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mbah nunung Online - HTML5 Shoutcast & Icecast Radio Web Player</title>
+
+<link href="css/nng-icast.css" rel="stylesheet" type="text/css">
+
+</head>
+<body style="width:100%;height:100%;padding:0;margin:0;background-color:#A9A9A9;">
+		
+<div class="icast" id="stream"></div>
+<script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"></script>
+<script src="js/nng-icast.js"></script>
+<script>
+    $("#stream").icast({
+	    URL: "https://s2.free-shoutcast.com:8206",
+		version: "2",
+		//mount_point: "rbtfm",
+		suara: "https://s2.free-shoutcast.com/stream/18206",
+		enable_cors: false,
+		show_listeners: true,
+		autoplay: true,
+		show_listeners: false,
+      logo: "https://i.imgur.com/w3oKQZE.png"
+    })
+</script>
+</body>
+</html>
