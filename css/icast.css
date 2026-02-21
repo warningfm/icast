@@ -26,9 +26,9 @@
 	background-size: cover;
 	position: absolute;
 	top: 0;
-	-webkit-filter: blur(20px):
-	-ms-filter: blur(20px);
-	filter: blur(20px);
+	-webkit-filter: blur(60px):
+	-ms-filter: blur(60px);
+	filter: blur(60px);
 	transform: scale(1.15);
 	opacity: 0.94;
 	z-index: 1;
